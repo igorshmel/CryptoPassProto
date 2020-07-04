@@ -8,7 +8,7 @@ This code was generated with github.com/twitchtv/twirp/protoc-gen-twirp v5.12.0.
 It is generated from these files:
 	service.proto
 */
-package __twproto
+package twproto
 
 import bytes "bytes"
 import strings "strings"
