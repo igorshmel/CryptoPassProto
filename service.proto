@@ -10,6 +10,21 @@ service Haberdasher {
   rpc Plus(PlusReq) returns (PlusRpl);
 }
 
+service Api {
+  rpc Authorize(RequestAuthorization) returns (ReplayAuthorization);
+}
+
+message RequestAuthorization {
+  string  email = 1;
+  string  password = 2;
+}
+
+message ReplayAuthorization {
+  int32   errno = 1;
+  string  errcode = 2;
+  string  errlang = 3;
+}
+
 // PlusReq
 message PlusReq {
   int32 a = 1; // must be > 0
