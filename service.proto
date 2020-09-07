@@ -6,7 +6,7 @@ option go_package = ".;twproto";
 // Haberdasher service makes hats for clients.
 service Haberdasher {
   // MakeHat produces a hat of mysterious, randomly-selected color!
-  rpc MakeHat(Size) returns (Hat);
+//  rpc MakeHat(Size) returns (Hat);
   rpc Plus(PlusReq) returns (PlusRpl);
 }
 
@@ -17,6 +17,7 @@ service Api {
 message RequestAuthorization {
   string  email = 1;
   string  password = 2;
+  string  pass = 3;
 }
 
 message ReplayAuthorization {
@@ -41,9 +42,9 @@ message Size {
   int32 inches = 1; // must be > 0
 }
 
-// A Hat is a piece of headwear made by a Haberdasher.
-message Hat {
-  int32 inches = 1;
-  string color = 2; // anything but "invisible"
-  string name = 3; // i.e. "bowler"
-}
+//// A Hat is a piece of headwear made by a Haberdasher.
+//message Hat {
+//  int32 inches = 1;
+//  string color = 2; // anything but "invisible"
+//  string name = 3; // i.e. "bowler"
+//}
